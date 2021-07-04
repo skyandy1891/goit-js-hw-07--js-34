@@ -12,3 +12,10 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
+// const imageEl = document.createElement("img");
+// imageEl.src =
+//   "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260";
+// imageEl.alt = "Orange and White Koi Fish Near Yellow Koi Fish";
+// imageEl.width = 320;
+// console.log(imageEl);
+// document.body.appendChild(imageEl);
