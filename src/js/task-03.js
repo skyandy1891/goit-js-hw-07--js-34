@@ -12,12 +12,15 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
-// const imageEl = document.createElement("img");
-// imageEl.src =
-//   "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260";
-// imageEl.alt = "Orange and White Koi Fish Near Yellow Koi Fish";
-// imageEl.width = 320;
-// console.log(imageEl);
-// document.body.appendChild(imageEl);
-const listImg = document.querySelector("ul#gallery");
-console.log(listImg);
+
+const newList = images.map(({ url, alt }) => {
+  const liCreating = document.createElement("li");
+  const picture = document.createElement("img");
+  liCreating.appendChild(picture);
+  picture.setAttribute("src", url);
+  picture.setAttribute("alt", alt);
+  return liCreating;
+});
+
+const listItem = document.querySelector("#gallery");
+listItem.append(...newList);
