@@ -19,3 +19,5 @@ const images = [
 // imageEl.width = 320;
 // console.log(imageEl);
 // document.body.appendChild(imageEl);
+const listImg = document.querySelector("ul#gallery");
+console.log(listImg);
