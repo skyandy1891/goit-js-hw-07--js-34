@@ -13,14 +13,12 @@ const images = [
   },
 ];
 
-const newList = images.map(({ url, alt }) => {
-  const liCreating = document.createElement("li");
-  const picture = document.createElement("img");
-  liCreating.appendChild(picture);
-  picture.setAttribute("src", url);
-  picture.setAttribute("alt", alt);
-  return liCreating;
-});
+const galleryList = document.querySelector('#gallery');
 
-const listItem = document.querySelector("#gallery");
-listItem.append(...newList);
+const createList = images.map(({ url, alt }) => {
+  return `<li><img src="${url}" alt="${alt}"/></li>`;
+});
+console.log(createList);
+
+galleryList.insertAdjacentHTML('afterbegin', createList);
+console.log(galleryList);
